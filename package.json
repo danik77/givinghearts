@@ -34,8 +34,7 @@
     "react-animation-on-scroll": "^5.0.0",
     "react-dom": "17.0.0",
     "react-markdown": "^8.0.3",
-    "react-moment": "^0.9.6",
-    "strapi": "^3.6.8",
+    "react-moment": "^0.9.6", 
     "stripe": "^8.217.0",
     "webflow-api": "^0.7.1"
   },
