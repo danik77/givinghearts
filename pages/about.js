@@ -27,6 +27,7 @@ const About = ({ articles, categories, homepage, projects, about }) => {
 /// ????
 export async function getStaticProps() {
     // Run API calls in parallel
+    /*
     const [articlesRes, categoriesRes, homepageRes, about, projects] =
     await Promise.all([
         fetchAPI("https://giv-back.herokuapp.com/api/articles", {
@@ -55,14 +56,17 @@ export async function getStaticProps() {
             },
         }),
     ])
+    */
 
     return {
         props: {
+            /*
             articles: articlesRes.data,
             categories: categoriesRes.data,
             homepage: homepageRes.data,
             projects: projects.data,
             about: about,
+            */
         },
         revalidate: 1,
     }

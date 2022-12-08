@@ -35,11 +35,13 @@ const MyApp = ({ Component, pageProps }) => {
   return (
     <>
       <Head>
+
+    {/*
         <link
           rel="shortcut icon"
           href={getStrapiMedia(global.attributes.favicon)}
         />
-
+*/}
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
         <link
@@ -56,11 +58,11 @@ const MyApp = ({ Component, pageProps }) => {
           href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
         />
       </Head>{" "}
-      <GlobalContext.Provider value={global.attributes}>
-        <Header projects={pageProps.projects} />
-        <Component {...pageProps} />{" "}
-        <Footer phone={pageProps.mainData.attributes.Contacts.phone} />
-      </GlobalContext.Provider>{" "}
+     {/* <GlobalContext.Provider value={global.attributes}>*/}
+        {/* <Header projects={pageProps.projects} /> */}
+       {/* <Component {...pageProps} />{" "} *}
+        {/*<Footer phone={pageProps.mainData.attributes.Contacts.phone} />*/}
+    {/* </GlobalContext.Provider>{" "}*/} 
     </>
   )
 }
@@ -73,6 +75,9 @@ MyApp.getInitialProps = async (ctx) => {
   // Calls page's `getInitialProps` and fills `appProps.pageProps`
   const appProps = await App.getInitialProps(ctx)
   // Fetch global site settings from Strapi
+
+
+  /*
   const globalRes = await fetchAPI(
     "https://giv-back.herokuapp.com/api/global",
     {
@@ -104,7 +109,7 @@ MyApp.getInitialProps = async (ctx) => {
       sort: "createdAt:desc",
     }
   )
-
+*/
   //const res4 = await fetchAPI2(`https://giv-back.herokuapp.com/api/articles`)
 
   /////ПРОБЛЕМА В ТОМУЩ О Є ПАРАМЕТРИ ????? ?? ?
@@ -137,9 +142,11 @@ MyApp.getInitialProps = async (ctx) => {
   return {
     ...appProps,
     pageProps: {
+      /*
       global: globalRes.data,
       mainData: mainData.data,
       activeProjects: activeProjects.data,
+      */
     },
     // res4: res4,
   }

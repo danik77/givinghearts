@@ -27,6 +27,7 @@ const Projects = ({ categories, activeProjects, completedProjects }) => {
 }
 
 export async function getStaticProps({ params }) {
+  /*
   const [activeProjects, completedProjects] = await Promise.all([
     fetchAPI("https://giv-back.herokuapp.com/api/projects", {
       populate: "*",
@@ -46,34 +47,23 @@ export async function getStaticProps({ params }) {
         },
       },
       sort: "createdAt:desc",
-      /*
-     pagination: {
-    start: 0,
-    limit: 3,
-  }
-  */
+ 
     }),
   ])
-  /*
-  const matchingCategories = await fetchAPI(
-    "https://giv-back.herokuapp.com/api/categories",
-    {
-      filters: { slug: "projects" },
-      populate: "*",
-    }
-  )
-  */
+ 
 
   const allCategories = await fetchAPI(
     "https://giv-back.herokuapp.com/api/categories"
   )
-
+*/
   return {
     props: {
+      /*
       //   category: matchingCategories.data[0],
       categories: allCategories,
       activeProjects: activeProjects.data,
       completedProjects: completedProjects.data,
+      */
     },
     revalidate: 1,
   }

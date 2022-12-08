@@ -69,6 +69,8 @@ const Article = ({ article, categories, projects }) => {
 }
 
 export async function getStaticPaths() {
+
+ /*
   const articlesRes = await fetchAPI(
     "https://giv-back.herokuapp.com/api/articles",
     { fields: ["slug"] }
@@ -109,12 +111,14 @@ export async function getStaticProps({ params }) {
       },
     }
   )
-
+*/
   return {
     props: {
+      /*
       article: articlesRes.data[0],
       categories: categoriesRes,
       projects: projects.data,
+      */
     },
     revalidate: 1,
   }

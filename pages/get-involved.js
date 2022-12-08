@@ -84,6 +84,7 @@ const GetInvolved = ({
 
 /// ????
 export async function getStaticProps() {
+  /*
     // Run API calls in parallel
     const [articlesRes, categoriesRes, homepageRes, projects, involved] =
     await Promise.all([
@@ -111,14 +112,16 @@ export async function getStaticProps() {
             populate: "*",
         }),
     ])
-
+*/
     return {
         props: {
+          /*
             articles: articlesRes.data,
             categories: categoriesRes.data,
             homepage: homepageRes.data,
             projects: projects.data,
             involved: involved,
+            */
         },
         revalidate: 1,
     }

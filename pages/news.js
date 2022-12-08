@@ -62,6 +62,8 @@ export async function getStaticProps({ params }) {
 
 export async function getStaticProps() {
   // Run API calls in parallel
+
+  /*
   const [articlesRes, projectsRes] = await Promise.all([
     fetchAPI("https://giv-back.herokuapp.com/api/articles", {
       populate: "*",
@@ -74,12 +76,7 @@ export async function getStaticProps() {
           $eq: true,
         },
       },
-      /*
-     pagination: {
-    start: 0,
-    limit: 3,
-  }
-  */
+ 
     }),
   ])
 
@@ -95,13 +92,15 @@ export async function getStaticProps() {
   const allCategories = await fetchAPI(
     "https://giv-back.herokuapp.com/api/categories"
   )
-
+*/
   return {
     props: {
+      /*
       articles: articlesRes.data,
       projects: projectsRes.data,
       categories: allCategories,
       category: matchingCategories.data[0],
+      */
     },
     revalidate: 1,
   }
